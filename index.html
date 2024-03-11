@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <script>
+    var a = prompt("Enter the length of side a: ");
+    console.log("Is a NaN? : " + isNaN(a));
+
+    var b = prompt("Enter the length of side b: ");
+    console.log("Is b NaN? : " + isNaN(b));
+
+    var c = prompt("Enter the length of side c: ");
+    console.log("Is c NaN? : " + isNaN(c));
+
+    function determineTriangle(a, b, c){
+        if(a == b && a == c && b==c){
+            window.alert("The triangle is EQUILATERAL");
+        }
+        else if(a == b || a == c || b == c)
+        {
+            window.alert("The triangle is ISOSCELES");
+        }
+        else{
+            window.alert("The triangle is SCALENE");
+        }
+    }
+    determineTriangle(a, b, c);
+
+    var checkNum = (isNaN(a) && isNaN(b) && isNaN(c));
+    while(checkNum){
+        determineTriangle(a, b, c);
+        break
+    }
+    </script>
+</body>
+</html>
